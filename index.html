@@ -2,71 +2,118 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
+        .container 
+        {
+            width: 100%;
+            height: auto;
+            border: 1px solid black;
+            padding: 10px;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+            flex-wrap: wrap;
         }
-
-        .container {
-            border: 1px solid gray;
-            padding: 15px;
-            width: 600px;
-            text-align: center;
+        .img-container
+        {
+            border: 1px solid black;
+            width: 100%;
+            box-sizing: border-box; 
+            padding: 0 10px;
         }
-
-        .strip {
-            border: 1px solid rgb(4, 69, 247);
-            width: auto;
-            background-color: gray;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+        img 
+        {
+            width: 100%;
+            height: auto;
+            max-width: 600px;
         }
-
-        .strip2 {
-            padding-top: 10px;
-        }
-
-        .button {
-            background-color: rgb(17, 17, 255);
-            text-align: center;
-            color: white;
+        .progress-container
+        {
+            border: 1px solid lightgrey;
             height: 20px;
+            display: flex;
+            margin-top: 10px;
+        }
+        .uploading-container
+        {
+            background-color: rgb(65, 71, 73);
+            width: 40%;
+            overflow: hidden;
+            font-size: 13px;
+            align-items: flex-start;
+        }
+        .uploading-bar 
+        {
+            background-color: rgb(243, 243, 243);
+            width: 60%;
+            overflow: auto;
+            font-size: 13px;
+            align-items: flex-end;
+        }
+        .data-container
+        {
+            width: 100%;
+            max-width: 600px;
+            margin: 10px;
+        }
+        .button-container 
+        {
+            margin: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 10px;
+        }
+        button 
+        {
+            background-color: royalblue;
+            color: white;
+            border-radius: 5px;
+            padding: 5px 10px;
         }
 
-        @media (max-width: 600px) {
-            .container {
-                width: 100%;
-                padding: 10px;
+        @media only screen and (min-width: 768px) {
+            .progress-container 
+            {
+                display: flex;
+            }
+            .img-container 
+            {
+                width: 20%;
+            }
+            .data-container 
+            {
+                width: 40%;
+            }
+            .button-container 
+            {
+                width: 40%;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="img">
-            <img src="https://avatars.mds.yandex.net/i?id=9bfb1b6307e6c09223cc8df40d15b03c6dd29a5b-4011133-images-thumbs&n=13" width="600px">
+        <div class="img-container">
+            <img src="https://previews.123rf.com/images/vectorplusb/vectorplusb1705/vectorplusb170500110/78501507-vector-illustration-of-circles-showing-downloading-process-isolated-on-white.jpg" alt="loading">
         </div>
-        <div class="strip">
-            <p>UPLOADING 40%</p>
-            <div class="strip2">
-                <p>About 23 minutes remain.</p>
+        <div class="data-container">
+            <div class="progress-container">
+                <div class="uploading-container">
+                    <span>Uploading 40%</span>
+                </div>
+                <div class="uploading-bar">
+                    <span>About 23 minutes remaining</span>
+                </div>
+            </div>
+            <div class="title-container">
+                <h3>Title of video</h3>
+            </div>
+            <div class="info-container">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, architecto?</p>
             </div>
         </div>
-        <div class="Text">
-            <p><strong>TITLE OF VIDEO</strong></p>
-            <p>*Your video is still uploading. Please keep this page open until done.</p>
-        </div>
-        <div class="Button button">
-            <p>DONE</p>
+        <div class="button-container">
+            <button>Done</button>
         </div>
     </div>
 </body>
