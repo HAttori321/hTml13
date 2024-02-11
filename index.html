@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            border: 1px solid gray;
+            padding: 15px;
+            width: 600px;
+            text-align: center;
+        }
+
+        .strip {
+            border: 1px solid rgb(4, 69, 247);
+            width: auto;
+            background-color: gray;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .strip2 {
+            padding-top: 10px;
+        }
+
+        .button {
+            background-color: rgb(17, 17, 255);
+            text-align: center;
+            color: white;
+            height: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img">
+            <img src="https://avatars.mds.yandex.net/i?id=9bfb1b6307e6c09223cc8df40d15b03c6dd29a5b-4011133-images-thumbs&n=13" width="600px">
+        </div>
+        <div class="strip">
+            <p>UPLOADING 40%</p>
+            <div class="strip2">
+                <p>About 23 minutes remain.</p>
+            </div>
+        </div>
+        <div class="Text">
+            <p><strong>TITLE OF VIDEO</strong></p>
+            <p>*Your video is still uploading. Please keep this page open until done.</p>
+        </div>
+        <div class="Button button">
+            <p>DONE</p>
+        </div>
+    </div>
+</body>
+</html>
